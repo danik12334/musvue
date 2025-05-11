@@ -1,0 +1,120 @@
+/* Глобальные стили */
+:root {
+    --primary-color: #e8f5e9; /* Светло-зеленый фон */
+    --secondary-color: #81c784; /* Акцентный зеленый */
+    --text-color: #2e7d32; /* Темно-зеленый текст */
+    --light-text: #f1f8e9; /* Светлый текст */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  #app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Стили для навигации */
+  nav {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* Стили для кнопок */
+  button, .login-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover, .login-btn:hover {
+    background-color: #66bb6a;
+  }
+  
+  /* Стили для карточек курсов */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .course-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .course-card h4 {
+    padding: 1rem 1rem 0;
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .course-card p {
+    padding: 0 1rem 1rem;
+    margin: 0.5rem 0 0;
+    color: #555;
+  }
+  
+  /* Стили для секций */
+  section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--secondary-color), #4caf50);
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-school {
+    background-color: white;
+    border-radius: 8px;
+    margin: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
