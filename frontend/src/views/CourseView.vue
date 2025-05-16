@@ -84,7 +84,7 @@ export default {
   methods: {
     async loadCourse() {
       try {
-        const response = await fetch(`http://localhost:3001/api/courses/${this.$route.params.id}`)
+        const response = await fetch(`https://musvue.onrender.com/courses/${this.$route.params.id}`)
         this.course = await response.json()
       } catch (error) {
         console.error('Ошибка загрузки:', error)
