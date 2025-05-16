@@ -143,7 +143,7 @@ export default {
 <style scoped>
 .teacher-form {
   padding: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
