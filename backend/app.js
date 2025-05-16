@@ -22,7 +22,7 @@ const app = express();
 
 // Middleware для CORS
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://musvue-frontend.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -139,6 +139,6 @@ app.listen(PORT, () => {
   console.log(`\n=== Сервер запущен ===`);
   console.log(`Порт: ${PORT}`);
   console.log(`База данных: ${process.env.DB_NAME || 'not configured'}`);
-  console.log(`CORS разрешен для: http://localhost:5173`);
+  console.log(`CORS разрешен для: https://musvue-frontend.onrender.com`);
   console.log(`Проверка API: http://localhost:${PORT}/api/check\n`);
 });
