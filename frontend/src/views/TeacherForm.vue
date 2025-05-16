@@ -100,7 +100,7 @@ export default {
   methods: {
     async loadTeacherData() {
       try {
-        const response = await fetch(`http://localhost:3001/api/teachers/${this.$route.params.id}`)
+        const response = await fetch(`https://musvue.onrender.com/api/teachers/${this.$route.params.id}`)
         const data = await response.json()
         this.form = data
       } catch (error) {
@@ -111,8 +111,8 @@ export default {
     async handleSubmit() {
       try {
         const url = this.mode === 'add' 
-          ? 'http://localhost:3001/api/teachers'
-          : `http://localhost:3001/api/teachers/${this.$route.params.id}`
+          ? 'https://musvue.onrender.com/api/teachers'
+          : `https://musvue.onrender.com/api/teachers/${this.$route.params.id}`
           
         const method = this.mode === 'add' ? 'POST' : 'PUT'
         
