@@ -112,7 +112,7 @@ export default {
   methods: {
     async loadCourseData() {
       try {
-        const response = await fetch(`http://localhost:3001/api/courses/${this.$route.params.id}`)
+        const response = await fetch(`https://musvue.onrender.com/api/courses/${this.$route.params.id}`)
         const data = await response.json()
         this.form = data
       } catch (error) {
@@ -123,8 +123,8 @@ export default {
     async handleSubmit() {
       try {
         const url = this.mode === 'add' 
-          ? 'http://localhost:3001/api/courses'
-          : `http://localhost:3001/api/courses/${this.$route.params.id}`
+          ? 'https://musvue.onrender.com/api/courses'
+          : `https://musvue.onrender.com/api/courses/${this.$route.params.id}`
           
         const method = this.mode === 'add' ? 'POST' : 'PUT'
         
