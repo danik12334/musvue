@@ -193,7 +193,7 @@ export default {
     },
     async loadTeachers() {
       try {
-        const response = await fetch('http://localhost:3001/api/teachers')
+        const response = await fetch('https://musvue.onrender.com/api/teachers')
         if (!response.ok) throw new Error('Ошибка загрузки')
         this.teachers = await response.json()
         this.filteredTeachers = [...this.teachers]
@@ -247,7 +247,7 @@ export default {
     async deleteTeacher() {
       try {
         const token = localStorage.getItem('token')
-        const response = await fetch(`http://localhost:3001/api/teachers/${this.teacherToDelete}`, {
+        const response = await fetch(`https://musvue.onrender.com/api/teachers/${this.teacherToDelete}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`
