@@ -25,7 +25,7 @@ export default createStore({
       if (!token) return;
 
       try {
-        const response = await fetch('http://localhost:3001/api/me', {
+        const response = await fetch('https://musvue.onrender.com/api/me', {
           headers: {
             Authorization: `Bearer ${token}`
           }
