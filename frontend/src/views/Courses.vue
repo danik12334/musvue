@@ -175,7 +175,7 @@ export default {
       try {
         const token = localStorage.getItem('token')
         if (!token) return
-        const response = await fetch('http://localhost:3001/api/me', {
+        const response = await fetch('https://musvue.onrender.com/api/me', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -194,7 +194,7 @@ export default {
     },
     async loadCourses() {
       try {
-        const response = await fetch('http://localhost:3001/api/courses')
+        const response = await fetch('https://musvue.onrender.com/api/courses')
         if (!response.ok) throw new Error('Ошибка загрузки')
         this.courses = await response.json()
         this.filteredCourses = [...this.courses]
@@ -248,7 +248,7 @@ export default {
     async deleteCourse() {
       try {
         const token = localStorage.getItem('token')
-        const response = await fetch(`http://localhost:3001/api/courses/${this.courseToDelete}`, {
+        const response = await fetch(`https://musvue.onrender.com/api/courses/${this.courseToDelete}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`
