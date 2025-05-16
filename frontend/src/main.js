@@ -25,7 +25,7 @@ router.beforeEach(async (to, from, next) => {
 
   if (token) {
     try {
-      const response = await fetch('http://localhost:3001/api/me', {
+      const response = await fetch('https://musvue.onrender.com/api/me', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`
